@@ -1,0 +1,31 @@
+<%= form_for :article, url: new_user_article_path do |f| %>
+  <%if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<center>
+    <div class="form-group form-inline" align="center" >
+      <center><b><%= f.label :title, "Titulo :" %></b></center>
+      <%= f.text_field :title, size: 25,  class: "form-control" %>
+    </div>
+    <br>
+    <div class="form-group form-inline" align="center" >
+      <center><b><%= f.label :content, "Contenido :" %></b></center>
+      <%= f.text_field :content, size: 25,  class: "form-control" %>
+    </div>
+    <br><br>
+    <div class="btn-group" role="group">
+        <%= f.submit "SAVE" ,class: "btn btn-primary btn-lg btn-block" %>
+        <%= link_to "CANCEL",root_path, class: "btn btn-primary btn-lg btn-block" %>
+    </div>
+</center>
+
+<%end%>

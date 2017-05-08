@@ -1,0 +1,22 @@
+<br><br><br>
+<div class="top-menu" >
+	<ul class="nav pull-right 	top-menu">
+		<li>
+				<div class="btn-group" role="group">
+					<%= link_to "BACK",root_path, class: "btn btn-primary btn-lg btn-block" %>
+				</div>
+		</li>
+	</ul>
+</div>
+
+<center><h1>ARTICULOS</h1>
+  <table border="5" class="table  table-striped">
+  <thead>
+		<th>ID_ARTICULO</th>
+    <th>TITULO</th>
+    <th>CONTENIDO</th>
+  </thead>
+  <tbody>
+    <%=render @article %>
+  </tbody>
+</table></center>

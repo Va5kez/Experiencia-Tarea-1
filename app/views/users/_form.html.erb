@@ -1,0 +1,16 @@
+<%= form_for(usuario) do |f| %>
+<center>
+<div class="form-group form-inline" align="center" >
+  <center><b><%= f.label :name, "Nombre :" %></b></center>
+  <%= f.text_field :name, size: 25,  class: "form-control" %>
+</div> <br>
+<div class="form-group form-inline" align="center" >
+  <center><b><%= f.label :email, "Email :" %></b></center>
+  <%= f.text_field :email, size: 25,  class: "form-control" %>
+</div> <br><br>
+<div class="btn-group" role="group">
+    <%= f.submit "SAVE" ,class: "btn btn-primary btn-lg btn-block" %> 
+    <%= link_to "CANCEL",root_path, class: "btn btn-primary btn-lg btn-block" %>
+</div></center>
+
+<%end%>

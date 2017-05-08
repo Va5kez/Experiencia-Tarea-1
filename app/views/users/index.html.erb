@@ -1,0 +1,24 @@
+<br><br><br>
+<div class="top-menu" >
+	<ul class="nav pull-right 	top-menu">
+		<li>
+				<div class="btn-group" role="group">
+					<%= link_to "BACK",root_path, class: "btn btn-primary btn-lg btn-block" %>
+				</div>
+		</li>
+	</ul>
+</div>
+<center><h1>USUARIOS</h1>
+<table border=1 class="table  table-striped" >
+  <thead>
+    <th>ID_USER</th>
+    <th>NOMBRE</th>
+    <th>AGREGAR ARTICULO</th>
+    <th>BORRAR</th>
+  </thead>
+
+  <tbody>
+    <%=render @user%>
+  </tbody>
+
+</table></center>

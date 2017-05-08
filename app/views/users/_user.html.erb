@@ -1,0 +1,6 @@
+<tr>
+  <td><%= user.id %></td>
+  <td><%= link_to user.name, user_path(user.id) %></td>
+  <td><%= link_to "Agregar", new_user_article_path(user.id) %></td>
+  <td><%= link_to "Borrar", user,class: "btn btn-default", method: :delete, data: {confirm: "Eliminar Usuario?"} %></td>
+</tr>
