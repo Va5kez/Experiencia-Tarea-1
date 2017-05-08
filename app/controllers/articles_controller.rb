@@ -4,11 +4,13 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = Article.new
+    @user = User.find(params[:user_id])
+    @article = @user.articles.build
   end
 
   def create
-    @article = Article.new(article_params)
+    @user = User.find(params[:user_id])
+    @article = @user.articles.build(article_params)
 
    if @article.save
      redirect_to articulos_path, notice: "AGREGADO CON EXITO"
